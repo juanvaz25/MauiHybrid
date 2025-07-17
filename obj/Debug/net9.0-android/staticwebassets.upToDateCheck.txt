@@ -1,0 +1,8 @@
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html
+D:\MauiHybrid\wwwroot\css\app.css
+D:\MauiHybrid\wwwroot\css\bootstrap\bootstrap.min.css
+D:\MauiHybrid\wwwroot\css\bootstrap\bootstrap.min.css.map
+D:\MauiHybrid\wwwroot\index.html
