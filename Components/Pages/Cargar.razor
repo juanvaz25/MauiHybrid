@@ -1,0 +1,48 @@
+﻿@page "/cargar"
+@inject AlumnoService AlumnoService
+
+<h1 class="text-center my-4">Registrar Alumno</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Nuevo Registro</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" id="nombre" @bind-value="mialumno.Nombre" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo</label>
+                        <select id="tipo" @bind="mialumno.Aprobado" class="form-select">
+                            <option disabled selected>Seleccione una opción</option>
+                            <option value="Aprobado">Aprobado</option>
+                            <option value="Desaprobado">Desaprobado</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="valor" class="form-label">Nota</label>
+                        <input type="number" id="valor" @bind-value="mialumno.Nota" class="form-control" />
+                    </div>
+
+                    <button class="btn btn-success w-100" @onclick="CrearAlumno">Registrar Alumno</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    Alumno mialumno = new Alumno();
+
+    public async Task CrearAlumno()
+    {
+        await AlumnoService.AddAlumnoAsync(mialumno);
+        mialumno = new Alumno(); // Limpiar formulario
+    }
+}

@@ -1,2 +1,3 @@
-2025/07/17-16:16:32.825 3b74 Creating DB D:\MauiHybrid\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiHybrid.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/07/17-16:16:33.616 3b74 Reusing MANIFEST D:\MauiHybrid\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiHybrid.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/07/27-16:29:53.940 357c Reusing MANIFEST D:\MauiHybrid\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiHybrid.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/07/27-16:29:53.950 357c Recovering log #3
+2025/07/27-16:29:53.954 357c Reusing old log D:\MauiHybrid\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiHybrid.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 

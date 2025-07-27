@@ -1,0 +1,42 @@
+﻿@page "/lista"
+
+@inject AlumnoService AlumnoService
+
+<h1>Alumnos</h1>
+
+@if (Alumnos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Resultado</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var alumno in Alumnos)
+            {
+                <tr>
+                    <td>@alumno.Nombre</td>
+                    <td>@alumno.Aprobado</td>
+                    <td>@alumno.Nota</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    public static List<Alumno> Alumnos = new List<Alumno>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Alumnos = await AlumnoService.GetAlumnosAsync();       
+    }
+}

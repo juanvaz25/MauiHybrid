@@ -35,9 +35,16 @@ namespace MauiHybrid
 
         public async Task UpdateAlumnoAsync(Alumno alumno)
         {
+            var local = _context.Alumnos.Local.FirstOrDefault(e => e.Id == alumno.Id);
+            if (local != null)
+            {
+                _context.Entry(local).State = EntityState.Detached;
+            }
+
             _context.Alumnos.Update(alumno);
             await _context.SaveChangesAsync();
         }
+
 
         public async Task DeleteAlumnoAsync(int id)
         {

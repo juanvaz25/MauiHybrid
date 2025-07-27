@@ -1,5 +1,6 @@
 Components\Layout\MainLayout.razor.css
 Components\Layout\NavMenu.razor.css
+Components\Pages\Login.razor.css
 wwwroot\css\app.css.gz
 wwwroot\index.html.gz
 wwwroot\css\bootstrap\bootstrap.min.css.gz
@@ -8,9 +9,9 @@ wwwroot\css\app.css.br
 wwwroot\index.html.br
 wwwroot\css\bootstrap\bootstrap.min.css.br
 wwwroot\MauiHybrid.styles.css.br
-wwwroot\MauiHybrid.5o28urgaxc.bundle.scp.css.br
+wwwroot\MauiHybrid.buvrk5gjq7.bundle.scp.css.br
 wwwroot\css\bootstrap\bootstrap.min.css.map.br
-wwwroot\MauiHybrid.5o28urgaxc.bundle.scp.css.gz
+wwwroot\MauiHybrid.buvrk5gjq7.bundle.scp.css.gz
 wwwroot\css\bootstrap\bootstrap.min.css.map.gz
 OpenSans-Regular.ttf
 appicon.ico
@@ -70,7 +71,7 @@ splashSplashScreen.scale-150.png
 splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
 wwwroot\MauiHybrid.styles.css
-wwwroot\MauiHybrid.5o28urgaxc.bundle.scp.css
+wwwroot\MauiHybrid.buvrk5gjq7.bundle.scp.css
 AboutAssets.txt
 wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css

@@ -1,1 +1,1 @@
-{"net":{"http_server_properties":{"servers":[],"version":5},"network_qualities":{"CAESABiAgICA+P////8B":"4G"}}}
+{"net":{"http_server_properties":{"servers":[{"anonymization":["FAAAAA8AAABodHRwczovLzAuMC4wLjEA",false,0],"server":"https://mdbcdn.b-cdn.net","supports_spdy":true},{"anonymization":["FAAAAA8AAABodHRwczovLzAuMC4wLjEA",false,0],"server":"https://cdn.jsdelivr.net","supports_spdy":true}],"supports_quic":{"address":"2803:c080:b:f367:4992:a5c:a39f:cace","used_quic":true},"version":5},"network_qualities":{"CAESABiAgICA+P////8B":"3G"}}}

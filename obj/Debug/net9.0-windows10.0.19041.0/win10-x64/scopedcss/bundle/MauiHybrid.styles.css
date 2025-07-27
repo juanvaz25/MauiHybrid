@@ -178,3 +178,21 @@ main[b-scae8l9kek] {
         overflow-y: auto;
     }
 }
+/* /Components/Pages/Login.razor.rz.scp.css */
+.divider[b-zji1oi9drb]:after,
+.divider[b-zji1oi9drb]:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom[b-zji1oi9drb] {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom[b-zji1oi9drb] {
+        height: 100%;
+    }
+}

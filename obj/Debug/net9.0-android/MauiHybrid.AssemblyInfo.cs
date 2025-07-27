@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MauiHybrid")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+aef26497fdd04629587396fb4307aa4ec6ae1bfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MauiHybrid")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MauiHybrid")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
