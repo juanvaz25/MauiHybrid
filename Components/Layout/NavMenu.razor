@@ -1,0 +1,33 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">MauiHybrid</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="cargar" Match="NavLinkMatch.All">
+                <i class="bi bi-house-fill fs-5"></i>
+                <span>Cargar</span>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="lista">
+                <i class="bi bi-list-columns fs-5"></i>
+                <span>Lista</span>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="editar">
+                <i class="bi bi-card-checklist fs-5"></i>
+                <span>Editar</span>
+            </NavLink>
+        </div>
+
+    </nav>
+</div>

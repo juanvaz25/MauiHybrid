@@ -1,0 +1,128 @@
+﻿@page "/editar"
+@inject AlumnoService AlumnoService
+
+<h1 class="text-center my-4">Gestión de Alumnos</h1>
+
+<div class="container">
+    <div class="row">
+        <!-- Formulario de edición -->
+        <div class="col-md-6">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Editar Alumno</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" id="nombre" @bind-value="mialumno.Nombre" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo</label>
+                        <select id="tipo" @bind="mialumno.Aprobado" class="form-select">
+                            <option selected disabled>Seleccione una opción</option>
+                            <option value="Aprobado">Aprobado</option>
+                            <option value="Desaprobado">Desaprobado</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="valor" class="form-label">Nota</label>
+                        <input type="number" id="valor" @bind-value="mialumno.Nota" class="form-control" />
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-success" @onclick="EditarAlumno">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de alumnos -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Lista de Alumnos</h5>
+                </div>
+                <div class="card-body">
+                    @if (Alumnos == null)
+                    {
+                        <p><em>Cargando datos...</em></p>
+                    }
+                    else if (Alumnos.Count == 0)
+                    {
+                        <p><em>No hay alumnos registrados.</em></p>
+                    }
+                    else
+                    {
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Nota</th>
+                                    <th>Tipo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var alumno in Alumnos)
+                                {
+                                    <tr>
+                                        <td>@alumno.Nombre</td>
+                                        <td>@alumno.Nota</td>
+                                        <td>@alumno.Aprobado</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button class="btn btn-outline-info btn-sm" @onclick="() => Asignal(alumno)">
+                                                    Seleccionar
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" @onclick="() => EliminarAlumnoDirecto(alumno.Id)">
+                                                    Eliminar
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    public static List<Alumno> Alumnos = new List<Alumno>();
+    Alumno mialumno = new Alumno();
+
+    public async Task EditarAlumno()
+    {
+        await AlumnoService.UpdateAlumnoAsync(mialumno);
+        Alumnos = await AlumnoService.GetAlumnosAsync();
+    }
+
+    public async Task EliminarAlumnoDirecto(int id)
+    {
+        await AlumnoService.DeleteAlumnoAsync(id);
+        Alumnos = await AlumnoService.GetAlumnosAsync();
+    }
+
+
+    void Asignal(Alumno objeto)
+    {
+        mialumno = new Alumno
+        {
+            Id = objeto.Id,
+            Nombre = objeto.Nombre,
+            Nota = objeto.Nota,
+            Aprobado = objeto.Aprobado
+        };
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Alumnos = await AlumnoService.GetAlumnosAsync();
+    }
+}
