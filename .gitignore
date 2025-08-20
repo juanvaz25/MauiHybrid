@@ -11,8 +11,6 @@ obj/
 # IDE folders
 .vscode/
 .idea/
-
-# Visual Studio cache/options
 .vs/
 
 # Logs
