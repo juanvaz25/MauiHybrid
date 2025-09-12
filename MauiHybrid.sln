@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiHybridApi", "..\MauiHybridApi\MauiHybridApi.csproj", "{7DC7B12D-DAA2-42DF-917F-7ED900F2A192}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{1850FF79-1AF8-403D-B58D-6A2B8A76FF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1850FF79-1AF8-403D-B58D-6A2B8A76FF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1850FF79-1AF8-403D-B58D-6A2B8A76FF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC7B12D-DAA2-42DF-917F-7ED900F2A192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC7B12D-DAA2-42DF-917F-7ED900F2A192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC7B12D-DAA2-42DF-917F-7ED900F2A192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC7B12D-DAA2-42DF-917F-7ED900F2A192}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
